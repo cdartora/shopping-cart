@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="./helpers/fetchItem.js" defer></script>
+    <script src="./helpers/fetchProducts.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="./helpers/saveCartItems.js" defer></script>
+    <script src="./helpers/getSavedCartItems.js" defer></script>
+  </head>
+  <body>
+    <div class='header-part'>
+      <h1 class='title is-1 header-title'>Trybeshopping</h1>
+      <div class='input-container'>
+        <input class='input is-rounded' placeholder='Produto que deseja procurar' type="text">
+      </div>
+      <button class="button is-sucessful is-rounded">Procurar</button>
+    </div>
+    <section class="container">
+      <p class="loading">carregando...</p>
+      <section class="items"></section>
+      <section class="cart">
+        <span class="cart__title">Carrinho de compras</span>
+        <button class="empty-cart button is-secundary">Esvaziar carrinho</button>
+        <aside class='menu'></aside>
+        <div class='price-container button is-primary'>
+          <span>Total: R$</span>
+          <p class="total-price"></p>
+        </div>
+        <ol class="cart__items"></ol>
+      </section>
+    </section>
+  </body>
+</html>
